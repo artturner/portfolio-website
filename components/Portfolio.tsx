@@ -7,11 +7,11 @@ import Image from 'next/image';
 const Portfolio: React.FC = () => {
   const projects = [
     {
-      title: "Data Analysis of Climate Patterns",
-      description: "Analyzed 10 years of climate data using Python and statistical methods to identify emerging patterns in global temperature variations.",
-      tags: ["Python", "Data Analysis", "Statistics", "Climate Science"],
+      title: "Customer Segmentation",
+      description: "Performed RFM (recency, frequency, and monetary) analysis on large customer dataset to create segments for targeted marketing.",
+      tags: ["Python", "Data Analysis", "Marketing", "RFM"],
       link: "#",
-      image: "/images/climate_change.jpg"
+      image: "/images/customersegmentation.jpg"
     },
     {
       title: "Machine Learning for Medical Imaging",
@@ -29,13 +29,19 @@ const Portfolio: React.FC = () => {
         <div className="max-w-5xl mx-auto px-6 py-16">
           <h1 className="text-4xl font-bold mb-4">Arthur Turner</h1>
           <p className="text-xl text-gray-600 mb-6">
-            Research Scientist | Data Analyst | Machine Learning Engineer
+            Machine Learning Engineer | AWS Certified | Ph.D. Quanitative Social Science
           </p>
           <div className="flex gap-4">
+          <a
+            href="https://github.com/artturner/machine-learning"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="outline" className="flex items-center gap-2">
               <Github size={16} />
               GitHub
             </Button>
+          </a>
             <Button variant="outline" className="flex items-center gap-2">
               <Link size={16} />
               LinkedIn
@@ -62,7 +68,7 @@ const Portfolio: React.FC = () => {
 
         {/* Projects Section */}
         <section>
-          <h2 className="text-2xl font-bold mb-6">Research Projects</h2>
+          <h2 className="text-2xl font-bold mb-6">Machine Learning Projects</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <Card key={index} className="overflow-hidden">
